@@ -1,0 +1,17 @@
+.navbar{
+    background-color: aliceblue;
+    padding: 30px;
+}
+.navbar a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 30px;
+    color: gold;
+}
+.nav-title{
+    margin-left: 250px;
+}
+.nav-link{
+    margin-right: 150px;
+}
