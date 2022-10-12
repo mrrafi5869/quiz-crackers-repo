@@ -8,7 +8,7 @@ const Quizs = () => {
     const quizs = useLoaderData().data.questions;
     return (
         <div className='container'>
-            <h1 className='text-center mb-5'>{title.name}</h1>
+            <h1 className='text-center mb-5'>Questoin of {title.name}</h1>
             <div className='quizs'>
             {
                 quizs.map(quiz => <Quiz

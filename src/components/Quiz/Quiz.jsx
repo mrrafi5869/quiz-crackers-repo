@@ -7,7 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({quiz}) => {
     const {question, correctAnswer, options} = quiz;
-    
+    const totalCorrectAnswer = [];
+    const totalIncorrectAnswer = [];
+
     const rightAnswer = () => {
         toast.success(correctAnswer, {
             position: "top-center",
@@ -22,6 +24,7 @@ const Quiz = ({quiz}) => {
     }
 
     const click = (option) => {
+        
         const correct = correctAnswer === option;
         if(correct){
             toast.success('correct!', {
@@ -34,7 +37,8 @@ const Quiz = ({quiz}) => {
                 progress: undefined,
                 theme: "light",
                 });
-                
+            totalCorrectAnswer.push(option);
+
         }
         else{
             toast.error('incorrect! please select a correct answer', {
@@ -47,9 +51,12 @@ const Quiz = ({quiz}) => {
                 progress: undefined,
                 theme: "light",
                 });
-                
+            totalIncorrectAnswer.push( option)
         }
+        console.log("correct", totalCorrectAnswer);
+        console.log("incorrect", totalIncorrectAnswer);
     }
+    
     return (
         <div>
             <div className='quiz'>
@@ -61,7 +68,7 @@ const Quiz = ({quiz}) => {
                     {
                         options.map(option => 
                             <div>
-                                <p onClick = {() => click(option)}><input type="radio" name='options' value={option}/>{option}</p>
+                                <p onClick = {() => click(option)}><input type="radio" name='options' value={option} />{option}</p>
                                 <ToastContainer></ToastContainer>
                             </div>
                             )
