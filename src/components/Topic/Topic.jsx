@@ -1,13 +1,8 @@
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Topic.css'
 
 const Topic = ({data}) => {
-    const { name, logo, total} = data;
-
-    const [quiz, setQuiz] = useState([]);
-    useEffect(() => {
-        
-    } , [])
+    const {id, name, logo, total} = data;
 
     return (
         <div className='topic'>
@@ -15,7 +10,7 @@ const Topic = ({data}) => {
             <div className='d-flex justify-content-between mt-3 align-items-center'>
                 <p className='fw-bolder text-black fs-3'>{name}</p>
                 <p className='fw-bold'>total: {total}</p>
-                <button className='btn btn-primary fw-bolder'>Start Practice</button>
+                <button className='btn btn-primary fw-bolder'><Link to={`/quiz/${id}`}>Start Practice</Link></button>
             </div>
         </div>
     );
