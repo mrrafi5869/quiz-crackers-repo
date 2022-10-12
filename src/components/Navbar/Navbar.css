@@ -2,11 +2,14 @@
     background-color: aliceblue;
     padding: 30px;
 }
+.navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
 .navbar a{
     text-decoration: none;
     font-weight: bolder;
     font-size: 20px;
-    margin-left: 30px;
     color: gold;
 }
 .nav-title{

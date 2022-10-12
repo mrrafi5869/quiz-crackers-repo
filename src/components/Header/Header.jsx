@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className='d-flex container justify-content-between my-5'>
+        <div className='d-flex flex-lg-row container justify-content-between my-5 flex-column '>
             <img className='img-fluid rounded-3' src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cXVpenxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
             <div className=''>
                 <h2>Questions and Answers</h2>
