@@ -1,8 +1,24 @@
 .quiz{
     width: 500px;
-    height: 400px;
+    height: auto;
     margin: 0 auto;
     border: 1px solid salmon;
     padding: 15px;
     border-radius: 10px;
+}
+.options p{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    height: 75px;
+}
+.success{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+}
+.error{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
 }
